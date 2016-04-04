@@ -66,7 +66,7 @@ mysql_select_db('parking');
  
 
 ?>
-<img src="../bs-education/<?php echo $venue_image?>"  width="1400" height="700"/>
+<img src="../park/<?php echo $venue_image?>"  width="1400" height="700"/>
 	<h1 align="center">Upcoming Events</h1>
 	
 	
