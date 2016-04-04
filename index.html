@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Park My Car</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+     <!-- FLEXSLIDER CSS -->
+<link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />    
+  <!-- Google	Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+</head>
+<body >
+<script>
+   //For the top header form validation
+function validateForm() {
+    
+    var user_name = document.forms["sign_form"]["t1"].value;
+    //var access = document.forms["sign_form"]["t2"].value;
+	
+   
+    if (user_name==null || user_name=="") {
+        alert("User name must be filled out");
+        return false;
+}
+    re = /^\w+$/;
+    if(!re.test(user_name)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      //form.u_name.focus();
+      return false;
+    }
+    
+  var pass_word = document.forms["sign_form"]["t2"].value;
+    //var conf_t2_word = document.forms["sign_form"]["conf_pass"].value;
+     if(pass_word == "" || pass_word==null) {
+          alert("Error: Password Empty");
+         // form.pass.focus();
+          return false;
+        }
+     
+    if(pass_word != "") {
+        if(pass_word.length < 6) {
+          alert("Error: Wrong Username/Password");
+         // form.pass.focus();
+          return false;
+        }
+        re = /[0-9]/;
+        if(!re.test(pass_word)) {
+          alert("Wrong Username/Password");
+         //form.pass.focus();
+          return false;
+        }
+        re = /[a-z]/;
+        if(!re.test(pass_word)) {
+          alert("Wrong Username/Password");
+         // form.pass.focus();
+          return false;
+        }
+        re = /[A-Z]/;
+        if(!re.test(pass_word)) {
+          alert("Wrong Username/Password");
+        //  form.pass.focus();
+          return false;
+        }
+      } 
+   
+
+}  
+//For the vertical right  signup form     
+function validateForm_signup() {
+    
+	 var first_name = document.forms["sign_up"]["s1"].value;
+     if (first_name==null || first_name=="") {
+         alert("Handle name must be filled out");
+         return false;
+ }
+     re = /^\w+$/;
+     if(!re.test(first_name)) {
+       alert("Error: Hadnle must contain only letters, numbers and underscores!");
+       //form.u_name.focus();
+       return false;
+     }
+     var last_name = document.forms["sign_up"]["s2"].value;
+     if (last_name==null || last_name=="") {
+         alert("Full Name name must be filled out");
+         return false;
+ }
+     re = /^\w+$/;
+     if(!re.test(last_name)) {
+       alert("Error: Full name must contain only letters, numbers and underscores!");
+       //form.u_name.focus();
+       return false;
+     }
+     
+   var pass_word = document.forms["sign_up"]["s5"].value;
+     var conf_pass_word = document.forms["sign_up"]["conf_pass"].value;
+     if(pass_word != "" && pass_word == conf_pass_word) {
+         if(pass_word.length < 6) {
+           alert("Error: Password must contain at least six characters!");
+          // form.pass_reg.focus();
+           return false;
+         }
+         if(pass_word == first_name) {
+           alert("Error: Password must be different from Username!");
+          // form.pass_reg.focus();
+           return false;
+         }
+         re = /[0-9]/;
+         if(!re.test(pass_word)) {
+           alert("Error: password must contain at least one number (0-9)!");
+          //form.pass_reg.focus();
+           return false;
+         }
+         re = /[a-z]/;
+         if(!re.test(pass_word)) {
+           alert("Error: password must contain at least one lowercase letter (a-z)!");
+          // form.pass_reg.focus();
+           return false;
+         }
+         re = /[A-Z]/;
+         if(!re.test(pass_word)) {
+           alert("Error: password must contain at least one uppercase letter (A-Z)!");
+         //  form.pass_reg.focus();
+           return false;
+         }
+       } 
+     else if(pass_word != conf_pass_word)
+     {
+         alert("Error:Your Password Does not Match With The Confirmed Password!");
+         return false;
+
+     }
+     else {
+         alert("Error: Please check that you've entered and confirmed your password!");
+       //  form.pass_reg.focus();
+         return false;
+       }
+     var sex = document.forms["sign_up"]["s3"].value;
+     if (sex==null || sex=="") {
+         alert("sex must be filled out");
+         return false;
+ }
+     
+     var email = document.forms["sign_up"]["mail"].value;
+     var atpos = email.indexOf("@");
+     var dotpos = email.lastIndexOf(".");
+     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+         alert("Not a valid e-mail");
+         return false;
+     }
+
+  
+}      
+
+
+</script> 
+
+ <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="logo-custom" src="assets/img/logo180-50.png" alt=""  /></a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#home">HOME</a></li>
+                     <li><a href="#login-sec">LOGIN</a></li>
+                    <li><a href="#signup-sec">SIGNUP</a></li>
+                     <li><a href="#faculty-sec">FACULTY</a></li>
+					<li><a href="#contact_part">CONTACT US</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+	   <div class="home-sec" id="home" >
+           <div class="overlay">
+ <div class="container">
+           <div class="row text-center " >
+           
+               <div class="col-lg-12  col-md-12 col-sm-12">
+               
+                <div class="flexslider set-flexi" id="main-section" >
+                    <ul class="slides move-me">
+                        <!-- Slider 01 -->
+                        <li>
+                              <h3>Online Parking</h3>
+                           <h1>THE UNIQUE METHOD</h1>
+                            <a  href="#features-sec" class="btn btn-info btn-lg" >
+                                GET AWESOME 
+                            </a>
+                             <a  href="#features-sec" class="btn btn-success btn-lg" >
+                                FEATURE LIST
+                            </a>
+                        </li>
+                        <!-- End Slider 01 -->
+                        
+                        <!-- Slider 02 -->
+                        <li>
+                            <h3>Online Parking</h3>
+                           <h1>UNMATCHED APPROACH</h1>
+                             <a  href="#features-sec" class="btn btn-primary btn-lg" >
+                               GET AWESOME 
+                            </a>
+                             <a  href="#features-sec" class="btn btn-danger btn-lg" >
+                                FEATURE LIST
+                            </a>
+                        </li>
+                        <!-- End Slider 02 -->
+                        
+                        <!-- Slider 03 -->
+                        <li>
+                            <h3>Online Parking</h3>
+                           <h1>AWESOME FACULTY PANEL</h1>
+                             <a  href="#features-sec" class="btn btn-default btn-lg" >
+                                GET AWESOME 
+                            </a>
+                             <a  href="#features-sec" class="btn btn-info btn-lg" >
+                                FEATURE LIST
+                            </a>
+                        </li>
+                        <!-- End Slider 03 -->
+                    </ul>
+                </div>
+                   
+     
+              
+              
+            </div>
+                
+               </div>
+                </div>
+           </div>
+           
+       </div>
+    
+       <!--HOME SECTION END-->   
+    <div  class="tag-line" >
+         <div class="container">
+           <div class="row  text-center" >
+           
+               <div class="col-lg-12  col-md-12 col-sm-12">
+               
+        <h2 data-scroll-reveal="enter from the bottom after 0.1s" ><i class="fa fa-circle-o-notch"></i> PARK MY CAR <i class="fa fa-circle-o-notch"></i> </h2>
+                   </div>
+               </div>
+             </div>
+        
+    </div>
+	      <div id="login-sec" class="container set-pad">
+             <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">Log In  </h1>
+                 </div>
+
+             </div>
+             <!--/.HEADER LINE END-->
+
+
+           <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" width="50">
+           
+               
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                    <form name="sign_form" action="connect_log_in.php" method="post" encrtype="multipart/form-data" onsubmit="return validateForm();">
+                        <div class="form-group">
+                            <input type="text" class="form-control "  name="e-mail" required="required" placeholder="e-mail " />
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" class="form-control " required="required" name="pass_log" placeholder="Password" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                   
+     
+              
+              
+                
+               </div>
+                </div>
+          </div> 
+       </div>
+
+	<!-- COURSES SECTION END-->
+    <div id="signup-sec"   >
+           <div class="overlay">
+ <div class="container set-pad">
+      <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >SIGN UP </h1>
+                     
+                 </div>
+
+             </div>
+             <!--/.HEADER LINE END-->
+           <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" width="50">
+           
+               
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                    <form name="sign_up" action="connect_sign_up.php" method="post" onsubmit="return (validateForm_signup());">
+                        <div class="form-group">
+                            <input type="text" class="form-control "  name="name" required="required" placeholder=" Name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control " required="required" name="number" placeholder="Phone Number" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control " required="required" name="password" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control " required="required" name="conf_pass"  placeholder="Confirm password" />
+                        </div>
+						
+						<div class="form-group">
+							<input type="radio" name="s3" value="M" class="form-control " required="required" placeholder="Male">
+						</div>
+						
+						<div class="form-group">
+							<input type="radio" name="s3" value="F" class="form-control " required="required" placeholder="Male">
+						</div>
+						
+                        <div class="form-group">
+                            <input type="text" class="form-control " required="required" name="email"  placeholder="E-Mail" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                   
+     
+              
+              
+                
+               </div>
+                </div>
+          </div> 
+       </div>
+    <!--HOME SECTION TAG LINE END-->   
+
+
+   <!-- FEATURES SECTION END-->
+    <div id="faculty-sec" >
+    <div class="container set-pad">
+             <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR FACULTY </h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo.
+                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo.
+                         </p>
+                 </div>
+
+             </div>
+             <!--/.HEADER LINE END-->
+
+           <div class="row" >
+           
+               
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                     <div class="faculty-div">
+                     <img src="assets/img/faculty/1.jpg"  class="img-rounded" />
+                   <h3 > </h3>
+                 <hr />
+                         <h4>Desigining <br /> Department</h4>
+                   <p >
+                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo . 
+                       
+                   </p>
+                </div>
+                   </div>
+                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                     <div class="faculty-div">
+                     <img src="assets/img/faculty/2.jpg"  class="img-rounded" />
+                   <h3 >JANE DEO ALEX</h3>
+                 <hr />
+                         <h4>Enginering <br /> Department</h4>
+                   <p >
+                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo . 
+                       
+                   </p>
+                </div>
+                   </div>
+               <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                     <div class="faculty-div">
+                     <img src="assets/img/faculty/3.jpg" class="img-rounded" />
+                   <h3 >RUBY DECORSA</h3>
+                 <hr />
+                         <h4>Management <br /> Department</h4>
+                   <p >
+                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo . 
+                       
+                   </p>
+                </div>
+                   </div>
+                 
+               </div>
+             </div>
+        </div>
+    <!-- FACULTY SECTION END-->
+         <div class="container" id="contact_part">
+             <div class="row set-row-pad"  >
+    <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Our Location </strong></h2>
+        <hr />
+                    <div ">
+                        <h4>234/80 -UFG , New Street,</h4>
+                        <h4>Switzerland.</h4>
+                        <h4><strong>Call:</strong>  + 67-098-907-1269 / 70 / 71 </h4>
+                        <h4><strong>Email: </strong>info@yourdomain.com</h4>
+                    </div>
+
+
+                </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Social Conectivity </strong></h2>
+        <hr />
+                    <div >
+                        <a href="#">  <img src="assets/img/Social/facebook.png" alt="" /> </a>
+                     <a href="#"> <img src="assets/img/Social/google-plus.png" alt="" /></a>
+                     <a href="#"> <img src="assets/img/Social/twitter.png" alt="" /></a>
+                    </div>
+                    </div>
+
+
+                </div>
+                 </div>
+     <!-- CONTACT SECTION END-->
+    <div id="footer">
+          &copy 2014 yourdomain.com | All Rights Reserved |  Design by : binarytheme.com
+    </div>
+     <!-- FOOTER SECTION END-->
+   
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts --> 
+         <script src="assets/js/jquery.flexslider.js"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts --> 
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts --> 
+         <script src="assets/js/custom.js"></script>
+</body>
+</html>
