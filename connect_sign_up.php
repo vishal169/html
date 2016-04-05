@@ -6,7 +6,7 @@ mysql_select_db('parking');
 
 $fn=$_POST['name'];
 $number=$_POST['number'];
-$sex=$_POST['s3'];
+$sex='M';
 
 $pass=$_POST['password'];
 $mail=$_POST['email'];

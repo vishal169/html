@@ -100,10 +100,10 @@ else{
                     <h2 ><strong>Our Location </strong></h2>
         <hr />
                     <div ">
-                        <h4>234/80 -UFG , New Street,</h4>
-                        <h4>Switzerland.</h4>
-                        <h4><strong>Call:</strong>  + 67-098-907-1269 / 70 / 71 </h4>
-                        <h4><strong>Email: </strong>info@yourdomain.com</h4>
+                        <h4>Near Geeta Bhawan</h4>
+                        <h4>Maur Mandi</h4>
+                        <h4><strong>Call:</strong> dont call us we dont pick up </h4>
+                        <h4><strong>Email: </strong>kya karega mail karke </h4>
                     </div>
 
 
