@@ -129,14 +129,13 @@ header('location:index.html');}
     <div class="container" id="contact_part">
              <div class="row set-row-pad"  >
     <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
-
-                    <h2 ><strong>Our Location </strong></h2>
+           <h2 ><strong>Our Location </strong></h2>
         <hr />
                     <div ">
-                        <h4>Near Geeta Bhawan</h4>
-                        <h4>Maur Mandi</h4>
-                        <h4><strong>Call:</strong> dont call us we dont pick up </h4>
-                        <h4><strong>Email: </strong>kya karega mail karke </h4>
+                        <h4>Sector - 34 D</h4>
+                        <h4>Chandigarh</h4>
+                        <h4><strong>Call:</strong>+91-9569040606,+91-9056500474 </h4>
+                        <h4><strong>Email:samaritancare@yahoo.com </strong></h4>
                     </div>
 
 
@@ -154,8 +153,7 @@ header('location:index.html');}
 
 
                 </div>
-                 </div>
-     <!-- CONTACT SECTION END-->
+                 </div>     <!-- CONTACT SECTION END-->
     <div id="footer">
           &copy 2014 yourdomain.com | All Rights Reserved |  Design by : binarytheme.com
     </div>
