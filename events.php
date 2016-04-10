@@ -124,7 +124,7 @@ else{
                  </div>
      <!-- CONTACT SECTION END-->
     <div id="footer">
-          &copy 2014 yourdomain.com | All Rights Reserved |  Design by : binarytheme.com
+         &copy 2016 getinpark.in | All Rights Reserved 
     </div>
      <!-- FOOTER SECTION END-->
    
