@@ -32,8 +32,8 @@
             <div class="navbar-collapse collapse move-me">
                 <ul class="nav navbar-nav navbar-right">
                    
-						<li ><a href="index.html">HOME</a></li>
-                        <li ><a href="#event-sec">EVENTS</a></li>
+						<li ><a href="index.html">LOGOUT</a></li>
+                        <li ><a href="events.php">EVENTS</a></li>
 					<li><a href="#contact_part">CONTACT US</a></li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@ mysql_select_db('parking');
  
 
 ?>
-<img src="../park/<?php echo $venue_image?>"  width="1400" height="700"/>
+<img src="../park/<?php echo $venue_image?>"  width="1400" height="700"  class="img-rounded"/>
 	<h1 align="center">Upcoming Events</h1>
 	
 	
