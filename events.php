@@ -32,7 +32,7 @@
             <div class="navbar-collapse collapse move-me">
                 <ul class="nav navbar-nav navbar-right">
                    
-						<li ><a href="index.html">Logout</a></li>
+						<li ><a href="index.html">LOGOUT</a></li>
                         <li ><a href="events.php">EVENTS</a></li>
 					<li><a href="#contact_part">CONTACT US</a></li>
                 </ul>
@@ -44,7 +44,7 @@
 <?php
  session_start();
 if(isset($_SESSION['id'])){ 
-$con=mysql_connect('localhost','root','phpMyAdmin','');
+$con=mysql_connect('localhost','root','parkingboysmaur','');
 if(!$con)
 echo "stop";
 mysql_select_db('parking');
@@ -69,7 +69,7 @@ $image=$run['image'];
 ?>
 <td width="400" height="300" valign="top" align="fixed-top">
 <a href="view_event.php?venue_id=<?php echo $i ?> ">   <?php //create a image link that on cllick go to player page view1.php?>  
-<img src="../park/<?php echo $image ?>" width="250"  class="img-rounded"/></a><br>
+<img src="../park/<?php echo $image ?>" width="250"  class="img-rounded" class="container"/></a><br>
 <?php 
 echo "<br>";
 echo $location;echo "<br>";

@@ -1,6 +1,6 @@
 <?php
 
-$con=mysql_connect('localhost','root','phpMyAdmin','');
+$con=mysql_connect('localhost','root','parkingboysmaur','');
 if(!$con) 
 echo "stop";
 mysql_select_db('parking');
