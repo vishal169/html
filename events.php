@@ -100,8 +100,7 @@ else{
                     <h2 ><strong>Our Location </strong></h2>
         <hr />
                     <div ">
-                        <h4>Sector - 34 D</h4>
-                        <h4>Chandigarh</h4>
+                        <h4>Demo Purpose</h4>
                         <h4><strong>Call:</strong>+91-9569040606,+91-9056500474 </h4>
                         <h4><strong>Email:samaritancare@yahoo.com </strong></h4>
                     </div>
