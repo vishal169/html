@@ -69,7 +69,7 @@ $image=$run['image'];
 ?>
 <td width="400" height="300" valign="top" align="fixed-top">
 <a href="view_event.php?venue_id=<?php echo $i ?> ">   <?php //create a image link that on cllick go to player page view1.php?>  
-<img src="../park/<?php echo $image ?>" width="250"  class="img-rounded" class="container"/></a><br>
+<img src="../<?php echo $image ?>" width="250"  class="img-rounded" class="container"/></a><br>
 <?php 
 echo "<br>";
 echo $location;echo "<br>";
